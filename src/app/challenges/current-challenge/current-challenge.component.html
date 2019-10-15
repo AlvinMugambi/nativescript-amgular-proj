@@ -1,0 +1,13 @@
+<ListView
+  [items]="challenges"
+  (itemTap)="onItemTap($event)"
+  iosEstimatedRowHeight="65"
+>
+  <ng-template let-challenge="item" let-i="index">
+    <GridLayout rows="40, 20" columns="50, *">
+      <label [text]="i" row="0" col="0" rowSpan="2"></label>
+      <label [text]="challenge" row="0" col="1"></label>
+      <label text="Item content row 2" row="1" col="1"></label>
+    </GridLayout>
+  </ng-template>
+</ListView>
